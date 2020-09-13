@@ -1,0 +1,136 @@
+﻿@model FinalProject.Models.ApplicationForm
+
+@{
+    ViewBag.Title = "ApplicantDetails";
+}
+
+<h2>ApplicantDetails</h2>
+
+<div>
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.GetEmployeementType.employeeType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GetEmployeementType.employeeType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GetUsers.email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GetUsers.email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.applicantName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.applicantName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FatherName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FatherName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.coApplicantName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.coApplicantName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.aadhar)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.aadhar)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.panNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.panNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.mobileNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.mobileNo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.requestedAmount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.requestedAmount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.homeLoan)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.homeLoan)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.autoMobile)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.autoMobile)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.bussinessLoan)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.bussinessLoan)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.applyDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.applyDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.status)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ApplicationId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

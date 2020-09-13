@@ -1,0 +1,115 @@
+﻿@model IEnumerable<FinalProject.Models.ApplicationForm>
+
+@{
+    ViewBag.Title = "ApplicationList";
+}
+
+<h2>ApplicationList</h2>
+
+<p>
+    @Html.ActionLink("Create New", "ApplicationForm")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.GetEmployeementType.employeeType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GetUsers.email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.applicantName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FatherName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.coApplicantName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.aadhar)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.panNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.mobileNo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.requestedAmount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.homeLoan)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.autoMobile)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.bussinessLoan)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.applyDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.status)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.GetEmployeementType.employeeType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GetUsers.email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.applicantName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FatherName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.coApplicantName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Address)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.aadhar)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.panNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.mobileNo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.requestedAmount)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.homeLoan)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.autoMobile)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.bussinessLoan)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.applyDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.status)
+        </td>
+        <td>
+            @Html.ActionLink("Details", "ApplicantDetails", new { id=item.ApplicationId }) |
+          </td>
+    </tr>
+}
+
+</table>
