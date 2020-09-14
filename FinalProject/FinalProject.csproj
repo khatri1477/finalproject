@@ -146,6 +146,8 @@
     <Content Include="Views\salesPerson\ApplicationForm.cshtml" />
     <Content Include="Views\salesPerson\ApplicationList.cshtml" />
     <Content Include="Views\salesPerson\ApplicantDetails.cshtml" />
+    <Content Include="Views\Shared\_salesPerson.cshtml" />
+    <Content Include="Views\Shared\_RCU.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

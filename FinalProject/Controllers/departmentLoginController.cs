@@ -29,6 +29,10 @@ namespace FinalProject.Controllers
                 {
                     return RedirectToAction("ApplicationForm", "salesPerson");
                 }
+                if(role == "RCU")
+                {
+                    return RedirectToAction("ApplicationList", "salesPerson");
+                }
             }
             else
             {
@@ -37,6 +41,11 @@ namespace FinalProject.Controllers
             }
             return View(users);
 
+        }
+        public ActionResult logout()
+        {
+            Session.Clear();
+            return RedirectToAction("login");
         }
     }
 }

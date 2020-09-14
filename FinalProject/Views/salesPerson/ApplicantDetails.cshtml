@@ -2,6 +2,7 @@
 
 @{
     ViewBag.Title = "ApplicantDetails";
+    Layout = "~/Views/Shared/_RCU.cshtml";
 }
 
 <h2>ApplicantDetails</h2>
@@ -131,6 +132,6 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.ApplicationId }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Approved", "approveByRcu", new { id = Model.ApplicationId }, new { @class="btn btn-info"}) |
+    @Html.ActionLink("Reject", "RejectByRcu", new { id = Model.ApplicationId },new {@class="btn btn-info" })
 </p>

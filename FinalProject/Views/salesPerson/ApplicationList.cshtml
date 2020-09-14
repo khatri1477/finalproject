@@ -2,20 +2,25 @@
 
 @{
     ViewBag.Title = "ApplicationList";
+    if(ViewBag.id==1)
+    {
+        Layout = "~/Views/Shared/_salesPerson.cshtml";
+    }
+    if(ViewBag.id==2)
+    {
+        Layout = "~/Views/Shared/_RCU.cshtml";
+    }
 }
 
-<h2>ApplicationList</h2>
 
-<p>
-    @Html.ActionLink("Create New", "ApplicationForm")
-</p>
+
 <table class="table">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.GetEmployeementType.employeeType)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.GetUsers.email)
+            @Html.Label("Application Holder")
         </th>
         <th>
             @Html.DisplayNameFor(model => model.applicantName)
@@ -107,8 +112,11 @@
             @Html.DisplayFor(modelItem => item.status)
         </td>
         <td>
-            @Html.ActionLink("Details", "ApplicantDetails", new { id=item.ApplicationId }) |
-          </td>
+            @if (ViewBag.id == 2)
+            {
+                @Html.ActionLink("Details", "ApplicantDetails", new { id = item.ApplicationId }) 
+}
+        </td>
     </tr>
 }
 
